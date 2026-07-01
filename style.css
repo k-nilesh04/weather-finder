@@ -1,0 +1,306 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #6d1d1d ;
+    background-image: url('https://loremflickr.com/1920/1080/forest');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#sbkuch {
+    min-height: 100vh
+}
+
+
+/* header section  */
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vmin;
+    font-size: 5vmin;
+    gap: 2px;
+}
+
+#headerText1 {
+    color: rgb(255, 255, 255);
+}
+
+#headerText2 {
+    color:yellow;
+}
+
+/* navbar section  */
+
+#navbar , #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+}
+
+#navbar {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+#searchBtn {
+    height: 8vmin;
+    width: 20vmin;
+    background-color: #FFB74D  ;
+    border: none;
+    cursor: pointer;
+    font-size: 4vmin;
+    border-radius: 15px;
+}
+
+#searchBtn:hover {
+    background-color: rgb(255, 238, 0);
+}
+
+
+#cityInput {
+    height: 8vmin;
+    width: 60vmin;
+    border: none;
+    font-size: large;
+    padding-left: 2vmin;
+    background-color: #FFF3E0  ;
+    outline: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+#cityInput::placeholder {
+    font-size: 3vmin;
+    color: #000000;
+    opacity: 0.7;
+}
+
+
+#suggestions {
+    position: absolute;
+    top: 100%;      /* directly below input */
+    left: 0;
+    width: 100%;
+
+    background: white;
+    border-top: none;
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background: #f0f0f0;
+}
+
+
+/* background shadow  */
+
+#searchBtn, #cityInput  {
+    border-radius: none;
+    box-shadow: 10px 10px 0 black;
+}
+
+#searchBtn:hover , #cityInput:hover {
+    transform: translate(-1px , -1px)
+}
+
+/* main content   */
+
+#main {
+    display: none;
+}
+
+#content {
+    width: 100%;
+}
+
+#cityName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+    color: aliceblue;
+    margin: 10vmin;
+    margin-bottom: 5vmin;
+    gap:5px;
+    text-transform: capitalize;
+}
+
+.forecast-container {
+    height: fit-content;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.forecast-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-name {
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #ffffff; /* Change to #fff if your page has a dark background */
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.temp-range {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.max-temp {
+  font-weight: 600;
+  color: rgb(255, 24, 24);
+  margin-right: 8px;
+}
+
+.min-temp {
+  color: #ffffff;
+}
+
+.cardBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vmin;
+    gap: 5vmin;
+    text-transform: capitalize;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+#weatherIcon {
+    height: 100px;
+    width: fit-content;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(196, 196, 196, 0.2);    
+    padding: 5vmin;
+    border-radius: 15px;
+    color: #f0f0f0;
+}
+
+#map {
+    height: 70vmin;
+    margin: 10vmin 20vmin;
+    border-radius: 10px;
+}
+
+
+
+/* footer section  */
+
+.footer {
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 1rem;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    border-top: 1px solid #c7b45d;
+}
+
+.footer-content {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.footer a {
+  color: yellow; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: rgb(255, 255, 83); 
+  text-decoration: underline;
+}
+
+.tagline, .tech-stack, .link2 {
+  margin-top: 0.5rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; 
+    gap: 1.5rem;
+  } 
+
+}
+
+/* size change  */
+
+@media(max-width:768px ) {
+
+    #cardBox2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15vmin;
+        margin-top: 5vmin;
+        gap: 8vmin;
+    }
+
+    #map {
+        margin: 10vmin;
+    }
+}
+

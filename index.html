@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Finder.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div id="sbkuch">
+            <header id="header">
+                <h1 id="headerText1">Weather Finder</h1>
+                <h1 id="headerText2">.</h1>
+            </header>
+
+            <nav id="navbar">
+                <div class="input-wrapper">
+                    <input type="text" id="cityInput" placeholder="Enter City Name" required>
+                    <div id="suggestions"></div>
+                </div>
+                <button id="searchBtn" type="button">Search</button>
+            </nav>
+
+            <main id="main">
+                <div id="content">
+                    <div id="cardBox1" class="cardBox">
+                        <div id="cityName">
+                            <h2></h2>    
+                        </div>
+                        <div class="icon">
+                            <img id="weatherIcon" src="" alt="weatherIcon">
+                        </div>
+                    </div>
+
+                    <div class="forecast-container" id="forecast-container"></div>
+
+                    <div id="cardBox2" class="cardBox">
+                        <div id="info1" class="card">
+                            <h1 class="info" id="heading-content">🔴 Live Report</h1><br>
+                            <h3 class="info" id="temperature"></h3>
+                            <h3 class="info" id="condition"></h3>
+                            <h3 class="info" id="windSpeed"></h3>
+                            <h3 class="info" id="pm2_5"></h3>
+                        </div>
+                        <div id="info2" class="card">
+                            <h1 class="info" id="1">🔴 Live Report</h1><br>
+                            <h3 class="info" id="chance_of_rain"></h3>
+                            <h3 class="info" id="precip_mm"></h3>
+                            <h3 class="info" id="humidity"></h3>
+                            <h3 class="info" id="localtime"></h3>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+            <div id="map">
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                    <p>© 2026 All rights reserved.</p>
+                    <p class="tagline"> Built with ☀️ and ☕ by K Nilesh.</p>
+                    </div>
+
+                    <div class="footer-center">
+                    <p>Data provided by <a href="https://www.weatherapi.com/docs/" target="_blank" rel="noreferrer">WeatherAPI</a></p>
+                    <p class="tech-stack">HTML • CSS • JavaScript</p>
+                    </div>
+
+                    <div class="footer-right">
+                        <div><a href="YOUR_GITHUB_LINK" target="_blank" rel="noreferrer">GitHub Repo</a></div>
+                        <div class="link2"><a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noreferrer">LinkedIn</a></div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="app.js" defer></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
